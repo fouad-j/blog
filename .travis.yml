@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "node"
+before_script:
+  - cd ./angular
+  - npm install -g gulp
+  - npm install -g karma
+  - npm install phantomjs
+  - npm install
+script: npm test

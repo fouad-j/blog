@@ -1,0 +1,11 @@
+<div class="media" ng-repeat="comment in articleCompletCtrl.article.comments">
+    <a class="pull-left">
+        <img class="media-object" ng-src="{{comment.picture}}" alt="">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading">{{comment.username}}
+            <small>{{comment.datePublication}}</small>
+        </h4>
+        <p>{{comment.content}}</p>
+    </div>
+</div>
