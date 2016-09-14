@@ -1,0 +1,13 @@
+
+<h2><a ui-sref="article({ articleId: articleDescCtrl.article.articleId })">{{articleDescCtrl.article.title}}</a></h2>
+<p><span class="glyphicon glyphicon-user"></span> by <strong>{{articleDescCtrl.article.username}}</strong></p>
+<p><span class="glyphicon glyphicon-time"></span> Posted on <strong>{{articleDescCtrl.article.datePublication}}</strong></p>
+
+<hr>
+
+<img class="img-responsive" src="http://placehold.it/900x300" />
+<hr>
+<p>{{articleDescCtrl.article.content | limitTo: 200 }} ...</p>
+<a class="btn btn-primary" ui-sref="article({ articleId: articleDescCtrl.article.articleId })">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+<hr>
