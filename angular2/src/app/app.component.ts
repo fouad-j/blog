@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
+import {ViewEncapsulation} from '@angular/core';
+import './../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @Component({
-    selector: 'my-app',
-    template: '<h1>My First Angular 2 App</h1>'
+  selector: 'my-app',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
-export class AppComponent { }
+export class AppComponent {}
