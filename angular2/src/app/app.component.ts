@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import {ViewEncapsulation} from '@angular/core';
+import { ViewEncapsulation, Component } from '@angular/core';
 import './../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @Component({
   selector: 'my-app',
@@ -7,4 +6,5 @@ import './../../node_modules/bootstrap/dist/css/bootstrap.min.css';
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {}
+export class AppComponent {
+}

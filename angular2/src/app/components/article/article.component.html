@@ -1,0 +1,47 @@
+<div *ngIf="article">
+    <h1>{{article.title}}</h1>
+    <p><span class="glyphicon glyphicon-user"></span> by <strong>{{article.username}} </strong></p>
+    <p><span class="glyphicon glyphicon-time"></span> Posted on <strong>{{article.datePublication}}</strong></p>
+    <img class="img-responsive" [src]="article.picture" />
+
+    <hr>
+
+    <p>{{article.content}}</p>
+
+    <div class="categories-article">
+        <p><span class="glyphicon glyphicon-tags"></span> <strong>Categories : </strong></p>
+        <ul class="list-inline">
+            <li *ngFor="let categorie of article.categories">
+                <!--<a ui-sref="categories({tag: cat})">{{cat}}</a>-->
+                <a [routerLink]="['/categorie',categorie]">{{categorie}}</a>
+            </li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="well">
+        <h4>Leave a Comment:</h4>
+        <form role="form">
+            <div class="form-group">
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <div class="media" *ngFor="let comment of article.comments">
+        <a class="pull-left">
+            <img class="media-object" [src]="comment.picture" alt="">
+        </a>
+        <div class="media-body">
+            <h4 class="media-heading">{{comment.username}}
+                <small>{{comment.datePublication}}</small>
+            </h4>
+            <p>{{comment.content}}</p>
+        </div>
+    </div>
+    
+</div>

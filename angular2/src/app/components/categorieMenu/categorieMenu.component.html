@@ -1,0 +1,19 @@
+<div class="well">
+    <h4>Blog Categories</h4>
+    <div class="row">
+        <div class="col-lg-6">
+            <ul class="list-unstyled">
+                <li *ngFor="let categorie of categories; let odd=odd; let even=even;">
+                    <span *ngIf="odd"><a [routerLink]="['/categorie',categorie]">{{categorie}}</a></span>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-6">
+            <ul class="list-unstyled">
+                <li *ngFor="let categorie of categories; let odd=odd; let even=even;">
+                    <span *ngIf="even"><a [routerLink]="['/categorie',categorie]">{{categorie}}</a></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

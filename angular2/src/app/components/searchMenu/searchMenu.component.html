@@ -1,0 +1,13 @@
+<div class="well">
+    <form (ngSubmit)="onSubmit(searchForm)" #searchForm="ngForm">
+        <h4>Blog Search</h4>
+        <div class="input-group">
+            <input type="text" class="form-control" name="search" [(ngModel)]="searchKeyword" minlength="3" required />
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit" [disabled]="!searchForm.valid">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </span>
+        </div>
+    </form>
+</div>

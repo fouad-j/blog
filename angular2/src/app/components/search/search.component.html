@@ -1,16 +1,1 @@
-<div class="well">
-    <form name="form_search" ng-submit="form_search.$valid && searchCtrl.submitSearchForm()" novalidate>
-        <h4>Blog Search</h4>
-        <div class="input-group">
-            <input type="text" class="form-control" ng-model="search" name="search" ng-minlength="3" required>
-            <span class="input-group-btn">
-                <button class="btn btn-default" type="submit">
-                    <span class="glyphicon glyphicon-search"></span>
-                </button>
-            </span>
-        </div>
-        <div ng-show="form_search.search.$error.minlength">
-            <p class="text-danger">Minimum 3 characters required</p>
-        </div>
-    </form>
-</div>
+<articleList [articles]="articles"></articleList>

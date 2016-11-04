@@ -1,21 +1,18 @@
 <div>
     <h2>
-        <a>Title article</a>
+        <a [routerLink]="['/articles', article.articleId]">{{article.title}}</a>
     </h2>
     <p>
-        <span class="glyphicon glyphicon-user"></span> by <strong>Fouad J</strong>
+        <span class="glyphicon glyphicon-user"></span> by <strong>{{article.username}}</strong>
+        <span class="glyphicon glyphicon-time"></span> Posted on <strong>{{article.datePublication}}</strong>
     </p>
-    <p><span class="glyphicon glyphicon-time"></span> Posted on <strong>10/29/2016</strong></p>
 
     <hr>
-
-    <img class="img-responsive" src="http://placehold.it/900x300" />
+    <img class="img-responsive" [src]="article.picture" />
     <hr>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo ullam, fugit, optio beatae molestias consequatur. 
-        Laudantium distinctio, ducimus quod, magnam sint excepturi molestiae porro consequatur, est harum mollitia voluptatum minus.
-    </p>
-    <a class="btn btn-primary">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+    <p>{{article.content | slice:0:300}}...</p>
+    <a class="btn btn-primary" [routerLink]="['/articles', article.articleId]">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
     <hr>
 </div>
