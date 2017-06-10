@@ -28,3 +28,10 @@ npm test
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## Using
+### Using
+- **Frontend:** Bootstrap, VueJs, Axios, Lodash, ES6
+- **Backend:** NodeJS, Restify
+- **Tests:** Karma, Mocha
+- **Other:** Webpack, EsLint, Babel

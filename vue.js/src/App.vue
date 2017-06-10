@@ -1,13 +1,34 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <blogHeader></blogHeader>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <router-view></router-view>
+        </div>
+        <div class="col-md-4">
+          <search></search>
+          <categories></categories>
+        </div>
+      </div>
+
+      <hr>
+      <blogFooter></blogFooter>
+    </div>
   </div>
 </template>
 
 <script>
+import blogFooter from './components/Footer.vue'
+import blogHeader from './components/Header.vue'
+import search from './components/Search.vue'
+import categories from './components/Categories.vue'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    blogFooter, blogHeader, search, categories
+  }
 }
 </script>
 
