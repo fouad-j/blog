@@ -1,6 +1,5 @@
 **/node_modules/
 **/typings/
 .idea/
-**/build/
 **/dist/
 *.iml
