@@ -3,20 +3,19 @@ import _ from 'lodash'
 
 let articles = []
 
-const getArticles = (numPage = 0, itemByPage = 10) => {
-  return axios.get(`http://localhost:3000/query/rest/articles/numPage/${numPage}/nbItem/${itemByPage}`).then(reponse => {
+let getArticles = (numPage = 1, itemByPage = 5) => {
+  return axios.get(`/query/rest/articles/numPage/${numPage}/nbItem/${itemByPage}`).then(reponse => {
     articles = reponse.data
     return articles
   })
 }
 
-const getArticle = articleId => {
+let getArticle = articleId => {
   const isExists = _.find(articles, {'articleId': articleId})
 
-  return isExists ? Promise.resolve(isExists) : axios.get(`http://localhost:3000/query/rest/article/${articleId}`).then(reponse => reponse.data)
+  return isExists ? Promise.resolve(isExists) : axios.get(`/query/rest/article/${articleId}`).then(reponse => reponse.data)
 }
 
-
-export {
+export default {
   getArticles, getArticle
 }

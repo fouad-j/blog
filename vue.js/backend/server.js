@@ -14,8 +14,7 @@ server.get('/query/rest/articles/numPage/:numPage/nbItem/:nbItem', (req, res, ne
 })
 
 server.get('/query/rest/articles/search/:keyword', (req, res, next) => {
-  const result = _.filter(articles, o => _.includes(o.title, req.params.keyword) || _.includes(o.content, req.params.keyword))
-  res.send(result)
+  res.send(_.filter(articles, o => _.includes(o.title, req.params.keyword) || _.includes(o.content, req.params.keyword)))
   next()
 })
 
