@@ -16,6 +16,13 @@ let getArticle = articleId => {
   return isExists ? Promise.resolve(isExists) : axios.get(`/query/rest/article/${articleId}`).then(reponse => reponse.data)
 }
 
+let search = keyword => {
+  return axios.get(`/query/rest/articles/search/${keyword}`).then(reponse => {
+    articles = reponse.data
+    return articles
+  })
+}
+
 export default {
-  getArticles, getArticle
+  getArticles, getArticle, search
 }
