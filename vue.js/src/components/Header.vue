@@ -12,8 +12,8 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a ui-sref="about"><i class="fa fa-globe"></i> About</a></li>
-          <li><a ui-sref="contact"><i class="fa fa-envelope"></i> Contact</a></li>
+          <li><router-link to="/about">About</router-link></li>
+          <li><router-link to="/contact">Contact</router-link></li>
         </ul>
       </div>
     </div>
