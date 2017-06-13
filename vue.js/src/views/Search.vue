@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="page-header">Articles List<small> 5 latest articles</small></h1>
-
+    {{articles}}
     <listArticles v-bind:articles="articles"></listArticles>
 
   </div>
@@ -16,10 +16,16 @@
     data: () => ({
       articles: []
     }),
+    watch: {
+      '$route.params.keyword': function (keyword) {
+        articleSerice.search(keyword).then(articles => {
+          this.articles = articles
+        })
+      }
+    },
     $mounted () {
-      console.log('sint.', this.$route.params.keyword)
-      articleSerice.search(this.$route.params.keyword).then(arts => {
-        this.articles = arts
+      articleSerice.search(this.$route.params.keyword).then(articles => {
+        this.articles = articles
       })
     },
     components: {
