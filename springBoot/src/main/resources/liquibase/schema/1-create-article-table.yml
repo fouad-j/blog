@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1-create-article-table
+      author: liquibase
+      changes:
+        - createTable:
+            tableName: Article
+            columns:
+              - column:
+                  name: article_id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: username
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: date_publication
+                  type: datetime
+              - column:
+                  name: title
+                  type: char(255)
+              - column:
+                  name: content
+                  type: varchar(2000)
+              - column:
+                  name: picture
+                  type: varchar(2000)

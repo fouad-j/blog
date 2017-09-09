@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2-load-articles
+      author: liquibase
+      changes:
+      - loadData:
+          file: ./liquibase/data/articles.csv
+          tableName: Article
