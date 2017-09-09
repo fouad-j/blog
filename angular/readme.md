@@ -16,7 +16,7 @@ http://localhost:3000/
 
 ## Using
 ### Using
-- **Frontend:** Bootstrap, jQuery, Less, ES6
+- **Frontend:** Angular, Bootstrap, Less, ES6
 - **Backend:** NodeJS, Express
 - **Tests:** Karma, Jasmine
 - **Other:** Gulp as task runner, EsLint as linter, Babel as transpiler

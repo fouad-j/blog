@@ -2,4 +2,6 @@
 **/typings/
 .idea/
 **/dist/
+**/target/
+**/.mvn/
 *.iml
